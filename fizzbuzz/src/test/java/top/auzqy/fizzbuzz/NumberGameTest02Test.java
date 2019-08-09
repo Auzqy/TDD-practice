@@ -26,18 +26,18 @@ public class NumberGameTest02Test {
     @ParameterizedTest
     @CsvSource({
             "1, 1",
-            "11, 11",
+            "11, 11",       // 输入及输出
             "3, Fizz",
-            "9, Fizz",
+            "9, Fizz",      // 3 的倍数
             "5, Buzz",
-            "25, Buzz",
+            "25, Buzz",     // 5 的倍数
             "15, FizzBuzz",
-            "30, FizzBuzz",
-            "13, Fizz",
-            "53, FizzBuzz",
-            "51, FizzBuzz",
-            "52, Buzz",
-            "31, Fizz"
+            "30, FizzBuzz", // 即是 3 的倍数，又是5的倍数
+            "13, Fizz",     // 包含数字 3
+            "53, FizzBuzz", // 及包含数字 3， 又包含数字 5
+            "51, FizzBuzz", // 即是 3 的倍数，又包含数字 5
+            "52, Buzz",     // 包含数字 5
+            "31, Fizz"      // 包含数字 3
     })
     void shouldReturn(int num, String output) {
         Assertions.assertEquals(output,new NumberGame02(num).toString());

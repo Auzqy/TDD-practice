@@ -21,7 +21,7 @@ import org.junit.jupiter.params.provider.CsvSource;
  * createTime: 2019-08-09 23:31
  * @author au
  */
-public class NumberGameTest02Test {
+public class NumberGame02Test {
 
     @ParameterizedTest
     @CsvSource({

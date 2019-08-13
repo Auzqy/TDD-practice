@@ -1,4 +1,4 @@
-package top.auzqy.args;
+package top.auzqy.args.test01;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package top.auzqy.args;
+package top.auzqy.args.test01;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;

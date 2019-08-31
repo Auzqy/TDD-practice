@@ -18,7 +18,8 @@ public class NumberGame10Test {
             "3, Fizz",
             "4, 4",
             "5, Buzz",
-            "15, FizzBuzz"
+            "15, FizzBuzz",
+            "20, Buzz"
     })
     void should_return_correct_num(String input, String result) {
         NumberGame10 numberGame = new NumberGame10();

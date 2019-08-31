@@ -4,13 +4,14 @@ public class NumberGame10 {
 
 
     public String playGame(String input) {
-        if ("15".equals(input)) {
+        int num = Integer.parseInt(input);
+        if (num % 3 == 0 && num % 5 == 0) {
             return "FizzBuzz";
         }
-        if ("3".equals(input)) {
+        if (num % 3 == 0) {
             return "Fizz";
         }
-        if ("5".equals(input)) {
+        if (num % 5 == 0) {
             return "Buzz";
         }
         return input;

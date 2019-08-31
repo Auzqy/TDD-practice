@@ -7,6 +7,9 @@ public class NumberGame10 {
         if ("3".equals(input)) {
             return "Fizz";
         }
+        if ("5".equals(input)) {
+            return "Buzz";
+        }
         return input;
     }
 }

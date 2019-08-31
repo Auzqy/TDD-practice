@@ -15,7 +15,9 @@ public class NumberGame10Test {
     @CsvSource({
             "1, 1",
             "2, 2",
-            "3, Fizz"
+            "3, Fizz",
+            "4, 4",
+            "5, Buzz"
     })
     void should_return_correct_num(String input, String result) {
         NumberGame10 numberGame = new NumberGame10();

@@ -12,8 +12,9 @@ public class CommandTest {
     static Stream<Arguments> command_excepted_paraName_paraValue() {
         return Stream.of(
                 Arguments.of("-l -p 8081 -d /usr/local", "true", "l"),
-                Arguments.of("-l true -p 8081 -d /usr/local", "true", "l")
-//                Arguments.of("-l true -p 8081 -d /usr/local", 8081, "p")
+                Arguments.of("-l true -p 8081 -d /usr/local", "true", "l"),
+                Arguments.of("-l true -p 8081 -d /usr/local", "/usr/local", "d"),
+                Arguments.of("-l true -p 8081 -d /usr/local", "8081", "p")
         );
     }
     

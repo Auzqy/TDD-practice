@@ -17,7 +17,7 @@ public class Schemas {
         Arrays.asList(schemaConfig.split(","))
                 .forEach(flag -> {
                     String[] nameValue = flag.split(":");
-                    schemas.put(nameValue[0], nameValue[1]);
+                    schemas.put(nameValue[0].substring(1), nameValue[1]);
                 });
     }
 

@@ -35,6 +35,5 @@ public class ArgsTest {
     @MethodSource("schemaAndCommandProvider")
     void should(String schema, String command) {
         System.out.println(schema + command);
-
     }
 }

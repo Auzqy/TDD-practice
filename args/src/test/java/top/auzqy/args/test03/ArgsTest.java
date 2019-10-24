@@ -36,15 +36,4 @@ public class ArgsTest {
         System.out.println(schema + command);
     }
 
-    static Stream<Arguments> test1() {
-        return Stream.of(
-                Arguments.of("dsf","dsf"),
-                Arguments.of("dsf","dsf")
-        );
-    }
-
-    @ParameterizedTest
-    @MethodSource("test1")
-    void should_sdfdf(String ddsf, String dsfga) {
-    }
 }

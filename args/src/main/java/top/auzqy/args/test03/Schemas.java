@@ -1,5 +1,6 @@
 package top.auzqy.args.test03;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -11,10 +12,17 @@ public class Schemas {
     Map<String, String> schemas;
 
     public Schemas(String schema) {
+        schemas = new HashMap<>();
 
     }
 
     public Object getValue(String paraName, String paraValue) {
-        return null;
+        String type = schemas.get(paraName);
+        switch (type) {
+            case "bool":
+                return "true".equalsIgnoreCase(paraValue);
+            default:
+                return paraValue;
+        }
     }
 }

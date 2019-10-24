@@ -29,6 +29,12 @@ public class Commands {
                 }
             }
         }
+
+        // 处理 bool 默认值的情况
+        String boolValue = commands.get("l");
+        if (null == boolValue) {
+            commands.put("l", "true");
+        }
     }
 
     private boolean isValue(String value) {

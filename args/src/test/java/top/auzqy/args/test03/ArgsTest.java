@@ -22,11 +22,11 @@ public class ArgsTest {
 
     static Stream<Arguments> schema_command_expected_paraName_provider() {
         return Stream.of(
-                Arguments.of("-l:boolean -p:integer -d:string",
+                Arguments.of("-l:bool -p:int -d:str",
                         "-l -p 8081 -d /usr/local", true, "l"),
-                Arguments.of("-l:boolean -p:integer -d:string",
+                Arguments.of("-l:bool -p:int -d:str",
                         "-l -p 8081 -d /usr/local", 8081, "p"),
-                Arguments.of("-l:boolean -p:integer -d:string",
+                Arguments.of("-l:bool -p:int -d:str",
                         "-l -p 8081 -d /usr/local", "/usr/local", "d")
 
 //                Arguments.of("-l:boolean -p:integer -d:string",

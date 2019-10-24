@@ -18,7 +18,12 @@ public class SchemaTest {
         return Stream.of(
                 Arguments.of("l:bool","true","l","true"),
                 Arguments.of("l:bool","false","l","false"),
-                Arguments.of("l:bool","false","l",null)
+                Arguments.of("l:bool","false","l",null),
+
+                Arguments.of("l:int","1","l","1"),
+                Arguments.of("l:int","-9","l","-9"),
+
+                Arguments.of("l:str","abc","l","abc")
         );
     }
     

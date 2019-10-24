@@ -19,9 +19,15 @@ public class Commands {
                 Arrays.asList(commandLine.split("\\s+"))
                         .listIterator();
         while (commandIterator.hasNext()) {
-            commands.put(
-                    commandIterator.next().substring(1),
-                    commandIterator.next());
+            String name = commandIterator.next().substring(1);
+            if (commandIterator.hasNext()) {
+                String value = commandIterator.next();
+                if (value.charAt(0) != '-') {
+                    commands.put(name, value);
+                } else {
+                    commandIterator.previous();
+                }
+            }
         }
     }
 

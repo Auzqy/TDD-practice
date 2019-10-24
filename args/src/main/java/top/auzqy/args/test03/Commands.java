@@ -1,6 +1,8 @@
 package top.auzqy.args.test03;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.ListIterator;
 import java.util.Map;
 
 /**
@@ -11,9 +13,16 @@ import java.util.Map;
 public class Commands {
     Map<String, String> commands;
 
-    public Commands(String commandConfig) {
+    public Commands(String commandLine) {
         commands = new HashMap<>();
-
+        ListIterator<String> commandIterator =
+                Arrays.asList(commandLine.split("\\s+"))
+                        .listIterator();
+        while (commandIterator.hasNext()) {
+            commands.put(
+                    commandIterator.next().substring(1),
+                    commandIterator.next());
+        }
     }
 
 

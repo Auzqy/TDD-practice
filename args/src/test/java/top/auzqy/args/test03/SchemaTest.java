@@ -1,5 +1,6 @@
 package top.auzqy.args.test03;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -26,5 +27,6 @@ public class SchemaTest {
     void should_(String schema, String expected,
                  String paraName, String paraValue) {
         Schemas schemas = new Schemas(schema);
+//        Assertions.assertEquals(expected,schemas.getValue(paraName,paraValue));
     }
 }

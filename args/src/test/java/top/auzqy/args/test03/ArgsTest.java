@@ -29,7 +29,7 @@ public class ArgsTest {
                         "-l false -p 8081 -d /usr/todo")
         );
     }
-    
+
     @ParameterizedTest
     @MethodSource("schemaAndCommandProvider")
     void should(String schema, String command) {

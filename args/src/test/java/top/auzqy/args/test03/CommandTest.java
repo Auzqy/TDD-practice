@@ -22,7 +22,7 @@ public class CommandTest {
     void should_command_excepted_paraName_paraValue(
             String command, String expected,
             String paraName) {
-//        Commands commands = new Commands(command);
-//        Assertions.assertEquals(expected,commands.getValue(paraName));
+        Commands commands = new Commands(command);
+        Assertions.assertEquals(expected,commands.getValue(paraName));
     }
 }

@@ -1,5 +1,6 @@
 package top.auzqy.args.test03;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,9 +12,13 @@ import java.util.Map;
 public class Schemas {
     Map<String, String> schemas;
 
-    public Schemas(String schema) {
+    public Schemas(String schemaConfig) {
         schemas = new HashMap<>();
-
+        Arrays.asList(schemaConfig.split(","))
+                .forEach(flag -> {
+                    String[] nameValue = flag.split(":");
+                    schemas.put(nameValue[0], nameValue[1]);
+                });
     }
 
     public Object getValue(String paraName, String paraValue) {

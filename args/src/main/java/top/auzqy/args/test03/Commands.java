@@ -31,10 +31,11 @@ public class Commands {
         }
 
         // 处理 bool 默认值的情况
-        String boolValue = commands.get("l");
-        if (null == boolValue) {
-            commands.put("l", "true");
-        }
+//        String boolValue = commands.get("l");
+//        if (null == boolValue) {
+//            commands.put("l", "true");
+//        }
+        commands.putIfAbsent("l", "true");
     }
 
     private boolean isValue(String value) {
@@ -42,7 +43,7 @@ public class Commands {
             if (value.length() > 2) {
                 return true;
             }
-            if(value.charAt(1) >= '0' && value.charAt(1) >= '9'){
+            if(value.charAt(1) >= '0' && value.charAt(1) <= '9'){
                 return true;
             }
             return false;

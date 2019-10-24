@@ -2,8 +2,8 @@ package top.auzqy.args.test03;
 
 public class Args {
 
-    private final Schemas schema;
-    private final Commands command;
+    private Schemas schema;
+    private Commands command;
 
     public Args(String schema, String command) {
         this.schema = new Schemas(schema);

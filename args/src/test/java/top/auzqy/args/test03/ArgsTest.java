@@ -15,11 +15,6 @@ import java.util.stream.Stream;
  */
 public class ArgsTest {
 
-    @Test
-    void onlyForPass() {
-        System.out.println("pass");
-    }
-
     static Stream<Arguments> schema_command_expected_paraName_provider() {
         return Stream.of(
                 Arguments.of("-l:bool -p:int -d:str",

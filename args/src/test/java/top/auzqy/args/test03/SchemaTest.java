@@ -18,7 +18,7 @@ public class SchemaTest {
         return Stream.of(
                 Arguments.of("l:bool","true","l","true"),
                 Arguments.of("l:bool","false","l","false"),
-                Arguments.of("l:bool","true","l",null)
+                Arguments.of("l:bool","false","l",null)
         );
     }
     
@@ -27,6 +27,7 @@ public class SchemaTest {
     void should_(String schema, String expected,
                  String paraName, String paraValue) {
         Schemas schemas = new Schemas(schema);
-//        Assertions.assertEquals(expected,schemas.getValue(paraName,paraValue));
+        Assertions.assertEquals(expected,
+                schemas.getValue(paraName,paraValue).toString());
     }
 }

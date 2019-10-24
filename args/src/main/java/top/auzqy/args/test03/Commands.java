@@ -17,7 +17,7 @@ public class Commands {
     }
 
 
-    public Object getValue(String paraName) {
-        return null;
+    public String getValue(String paraName) {
+        return commands.get(paraName);
     }
 }

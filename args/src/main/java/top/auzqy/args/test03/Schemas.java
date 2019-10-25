@@ -14,7 +14,7 @@ public class Schemas {
 
     public Schemas(String schemaConfig) {
         schemas = new HashMap<>();
-        Arrays.asList(schemaConfig.split(","))
+        Arrays.asList(schemaConfig.split("\\s+"))
                 .forEach(flag -> {
                     String[] nameValue = flag.split(":");
                     schemas.put(nameValue[0], nameValue[1]);

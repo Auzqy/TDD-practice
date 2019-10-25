@@ -26,6 +26,8 @@ public class Schemas {
         switch (type) {
             case "bool":
                 return "true".equalsIgnoreCase(paraValue);
+            case "int":
+                return Integer.parseInt(paraValue);
             default:
                 return paraValue;
         }

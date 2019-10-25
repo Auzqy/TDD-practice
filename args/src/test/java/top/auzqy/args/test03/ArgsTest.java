@@ -22,12 +22,15 @@ public class ArgsTest {
                 Arguments.of("l:bool p:int d:str",
                         "-l -p 8081 -d /usr/local", "8081", "p"),
                 Arguments.of("l:bool p:int d:str",
-                        "-l -p 8081 -d /usr/local", "/usr/local", "d")
+                        "-l -p 8081 -d /usr/local", "/usr/local", "d"),
+                Arguments.of("l:bool p:int d:str",
+                        "-l true -p -9 -d /usr/local", true, "l"),
+                Arguments.of("l:bool p:int d:str",
+                        "-l false -p -9 -d /usr/local", false, "l"),
+                Arguments.of("l:bool p:int d:str",
+                        "-l false -p -9 -d /usr/local", "-9", "p")
 
-//                Arguments.of("-l:boolean -p:integer -d:string",
-//                        "-l -p -9 -d /usr/local"),
-//                Arguments.of("-l:boolean -p:integer -d:string",
-//                        "-l false -p 8081 -d /usr/todo")
+
         );
     }
 

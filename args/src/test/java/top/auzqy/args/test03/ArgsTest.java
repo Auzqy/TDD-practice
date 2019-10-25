@@ -42,4 +42,19 @@ public class ArgsTest {
         Assertions.assertEquals(expected,args.getValue(paraName));
     }
 
+    static Stream<Arguments> schema_command_exception_paraName_paraValue() {
+        return Stream.of(
+                Arguments.of("l:bool p:int d:str",
+                        "-l false -p -d /usr/local", "p")
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("schema_command_exception_paraName_paraValue")
+    void should_schema_command_exception_paraName_paraValue(
+            String schema, String command, String paraName) {
+        Args args = new Args(schema, command);
+        Assertions.assertThrows(
+                NumberFormatException.class, () -> args.getValue(paraName));
+    }
 }

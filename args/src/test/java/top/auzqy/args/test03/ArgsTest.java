@@ -20,7 +20,7 @@ public class ArgsTest {
                 Arguments.of("l:bool p:int d:str",
                         "-l -p 8081 -d /usr/local", true, "l"),
                 Arguments.of("l:bool p:int d:str",
-                        "-l -p 8081 -d /usr/local", 8081, "p"),
+                        "-l -p 8081 -d /usr/local", "8081", "p"),
                 Arguments.of("l:bool p:int d:str",
                         "-l -p 8081 -d /usr/local", "/usr/local", "d")
 

@@ -36,7 +36,7 @@ public class ArgsTest {
 
     @ParameterizedTest
     @MethodSource("schema_command_expected_paraName_provider")
-    void should(String schema, String command,
+    void should_return_expectedValue(String schema, String command,
                 Object expected, String paraName) {
         Args args = new Args(schema, command);
         Assertions.assertEquals(expected,args.getValue(paraName));
@@ -51,7 +51,7 @@ public class ArgsTest {
 
     @ParameterizedTest
     @MethodSource("schema_command_exception_paraName_paraValue")
-    void should_schema_command_exception_paraName_paraValue(
+    void should_return_exceptedException(
             String schema, String command, String paraName) {
         Args args = new Args(schema, command);
         Assertions.assertThrows(

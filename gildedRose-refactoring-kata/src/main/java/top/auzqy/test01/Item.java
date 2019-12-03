@@ -61,23 +61,31 @@ public class Item {
 
         updateSellInDays();
 
-        if (sellIn < 0) {
-            if (!isAgedBrie()) {
-                if (!isBackstagePass()) {
-                    if (quality > 0) {
-                        if (!isSulfuras()) {
-                            quality = quality - 1;
-                        }
+        if (isExpired()) {
+            updateQualityAfterExpiration();
+        }
+    }
+
+    private void updateQualityAfterExpiration() {
+        if (!isAgedBrie()) {
+            if (!isBackstagePass()) {
+                if (quality > 0) {
+                    if (!isSulfuras()) {
+                        quality = quality - 1;
                     }
-                } else {
-                    quality = 0;
                 }
             } else {
-                if (quality < 50) {
-                    quality = quality + 1;
-                }
+                quality = 0;
+            }
+        } else {
+            if (quality < 50) {
+                quality = quality + 1;
             }
         }
+    }
+
+    private boolean isExpired() {
+        return sellIn < 0;
     }
 
     private void updateSellInDays() {

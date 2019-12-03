@@ -65,10 +65,11 @@ public class Item {
                     quality = quality + 1;
                 }
 
-                if (sellIn < 5) {
-                    if (quality < 50) {
-                        quality = quality + 1;
-                    }
+                if (sellIn >= 5) {
+                    return;
+                }
+                if (quality < 50) {
+                    quality = quality + 1;
                 }
             }
             return;

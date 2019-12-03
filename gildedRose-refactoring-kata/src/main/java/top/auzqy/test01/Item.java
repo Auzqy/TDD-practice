@@ -1,5 +1,6 @@
 package top.auzqy.test01;
 
+import top.auzqy.test01.items.AgedBrie;
 import top.auzqy.test01.items.BackstagePass;
 import top.auzqy.test01.items.Sulfuras;
 
@@ -20,7 +21,7 @@ public class Item {
     }
 
     public static Item createAgedBrie(int sellIn, int quality) {
-        return new Item("Aged Brie", sellIn, quality);
+        return new AgedBrie(sellIn, quality);
     }
 
     /**

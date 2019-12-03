@@ -44,37 +44,7 @@ public class Item {
         }
     }
 
-    private void updateQuality() {
-
-        if (isAgedBrie()) {
-            if (quality < 50) {
-                quality = quality + 1;
-            }
-            return;
-        }
-
-        if (isBackstagePass()) {
-            if (quality < 50) {
-                quality = quality + 1;
-
-                if (sellIn >= 10) {
-                    return;
-                }
-
-                if (quality < 50) {
-                    quality = quality + 1;
-                }
-
-                if (sellIn >= 5) {
-                    return;
-                }
-                if (quality < 50) {
-                    quality = quality + 1;
-                }
-            }
-            return;
-        }
-
+    protected void updateQuality() {
         if (quality <= 0) {
             return;
         }

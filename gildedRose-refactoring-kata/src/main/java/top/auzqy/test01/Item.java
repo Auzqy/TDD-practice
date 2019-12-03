@@ -73,13 +73,7 @@ public class Item {
         }
     }
 
-    private void updateQualityAfterExpiration() {
-        if (isAgedBrie()) {
-            if (quality < 50) {
-                quality = quality + 1;
-            }
-            return;
-        }
+    protected void updateQualityAfterExpiration() {
 
         if (isBackstagePass()) {
             quality = 0;

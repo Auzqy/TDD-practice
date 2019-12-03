@@ -12,8 +12,13 @@ public class Item {
         return new Item("Backstage passes to a TAFKAL80ETC concert",
                 sellIn, quality);
     }
+
     public static Item createSulfuras(int sellIn, int quality) {
         return new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
+    }
+
+    public static Item createAgedBrie(int sellIn, int quality) {
+        return new Item("Aged Brie", sellIn, quality);
     }
 
     public Item(String name, int sellIn, int quality) {

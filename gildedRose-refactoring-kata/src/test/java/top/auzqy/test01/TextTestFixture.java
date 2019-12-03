@@ -20,8 +20,8 @@ public class TextTestFixture {
                 new Item("+5 Dexterity Vest", 10, 20), //
                 new Item("Aged Brie", 2, 0), //
                 new Item("Elixir of the Mongoose", 5, 7), //
-                new Item("Sulfuras, Hand of Ragnaros", 0, 80), //
-                new Item("Sulfuras, Hand of Ragnaros", -1, 80),
+                Item.createSulfuras(0, 80), //
+                Item.createSulfuras(-1, 80), //
                 Item.createBackstagePass(15, 20),
                 Item.createBackstagePass(10, 49),
                 Item.createBackstagePass(5, 49),

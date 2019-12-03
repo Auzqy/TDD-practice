@@ -7,6 +7,10 @@ class GildedRose {
         this.items = items;
     }
 
+    private boolean isBackstagePass(Item item) {
+        return item.name.equals("Backstage passes to a TAFKAL80ETC concert");
+    }
+
     public void updateQuality() {
         for (Item item : items) {
             if (!item.name.equals("Aged Brie")

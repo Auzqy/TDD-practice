@@ -10,7 +10,7 @@ public class TextTestFixture {
         System.out.println(baseline);
     }
 
-    private static String getBaseLine() {
+    public static String getBaseLine() {
         //        PrintStream printStream = System.out;
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(out);

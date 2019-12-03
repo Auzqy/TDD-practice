@@ -32,8 +32,8 @@ public class Item {
     }
 
     void passOneDay() {
-        updateSellInDays();
         updateQuality();
+        updateSellInDays();
 
         if (isExpired()) {
             updateQualityAfterExpiration();

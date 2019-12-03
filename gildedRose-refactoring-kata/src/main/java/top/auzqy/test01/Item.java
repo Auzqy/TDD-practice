@@ -96,6 +96,9 @@ public class Item {
     }
 
     private void updateSellInDays() {
+        if (isSulfuras()) {
+            return;
+        }
         if (!isSulfuras()) {
             sellIn = sellIn - 1;
         }

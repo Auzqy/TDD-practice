@@ -54,8 +54,8 @@ public class Item {
         return false;
     }
 
-    boolean isSulfuras() {
-        return name.equals("Sulfuras, Hand of Ragnaros");
+    protected boolean isSulfuras() {
+        return false;
     }
 
     void passOneDay() {

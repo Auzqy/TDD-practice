@@ -99,8 +99,6 @@ public class Item {
         if (isSulfuras()) {
             return;
         }
-        if (!isSulfuras()) {
             sellIn = sellIn - 1;
-        }
     }
 }

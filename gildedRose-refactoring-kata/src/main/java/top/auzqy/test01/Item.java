@@ -59,9 +59,7 @@ public class Item {
             }
         }
 
-        if (!isSulfuras()) {
-            sellIn = sellIn - 1;
-        }
+        updateSellInDays();
 
         if (sellIn < 0) {
             if (!isAgedBrie()) {
@@ -79,6 +77,12 @@ public class Item {
                     quality = quality + 1;
                 }
             }
+        }
+    }
+
+    private void updateSellInDays() {
+        if (!isSulfuras()) {
+            sellIn = sellIn - 1;
         }
     }
 }

@@ -12,6 +12,7 @@
     <modules>
         <module>fizzbuzz</module>
         <module>args</module>
+        <module>gildedRose-refactoring-kata</module>
     </modules>
 
     <properties>

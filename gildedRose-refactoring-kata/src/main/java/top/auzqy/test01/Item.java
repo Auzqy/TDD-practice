@@ -23,14 +23,6 @@ public class Item {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
 
-    protected boolean isAgedBrie() {
-        return false;
-    }
-
-    protected boolean isSulfuras() {
-        return false;
-    }
-
     void passOneDay() {
         updateSellInDays();
         updateQuality();

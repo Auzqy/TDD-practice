@@ -1,6 +1,10 @@
 package top.auzqy.test01;
 
 
+import top.auzqy.test01.items.AgedBrie;
+import top.auzqy.test01.items.BackstagePass;
+import top.auzqy.test01.items.Sulfuras;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
@@ -17,16 +21,16 @@ public class TextTestFixture {
         printStream.println("OMGHAI!");
 
         Item[] items = new Item[] {
-                Item.createNormalItem("+5 Dexterity Vest", 10, 20), //
-                Item.createAgedBrie(2, 0), //
-                Item.createNormalItem("Elixir of the Mongoose", 5, 7), //
-                Item.createSulfuras(0, 80), //
-                Item.createSulfuras(-1, 80), //
-                Item.createBackstagePass(15, 20),
-                Item.createBackstagePass(10, 49),
-                Item.createBackstagePass(5, 49),
+                new Item("+5 Dexterity Vest", 10, 20), //
+                new AgedBrie(2, 0), //
+                new Item("Elixir of the Mongoose", 5, 7), //
+                new Sulfuras(0, 80), //
+                new Sulfuras(-1, 80), //
+                new BackstagePass(15, 20),
+                new BackstagePass(10, 49),
+                new BackstagePass(5, 49),
                 // this conjured item does not work properly yet
-                Item.createNormalItem("Conjured Mana Cake", 3, 6) };
+                new Item("Conjured Mana Cake", 3, 6)};
 
         GildedRose app = new GildedRose(items);
 

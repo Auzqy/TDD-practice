@@ -12,29 +12,6 @@ public class Item {
 
     public int quality;
 
-    public static Item createBackstagePass(int sellIn, int quality) {
-        return new BackstagePass(sellIn, quality);
-    }
-
-    public static Item createSulfuras(int sellIn, int quality) {
-        return new Sulfuras(sellIn, quality);
-    }
-
-    public static Item createAgedBrie(int sellIn, int quality) {
-        return new AgedBrie(sellIn, quality);
-    }
-
-    /**
-     * 这个方法的设计完全是为了使用时整齐，并非必须
-     * @param name
-     * @param sellIn
-     * @param quality
-     * @return
-     */
-    public static Item createNormalItem(String name, int sellIn, int quality) {
-        return new Item(name, sellIn, quality);
-    }
-
     protected Item(String name, int sellIn, int quality) {
         this.name = name;
         this.sellIn = sellIn;

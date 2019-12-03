@@ -50,8 +50,8 @@ public class Item {
         return false;
     }
 
-    boolean isAgedBrie() {
-        return name.equals("Aged Brie");
+    protected boolean isAgedBrie() {
+        return false;
     }
 
     boolean isSulfuras() {

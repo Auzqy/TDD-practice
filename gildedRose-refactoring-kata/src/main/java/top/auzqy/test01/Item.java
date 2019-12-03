@@ -8,6 +8,11 @@ public class Item {
 
     public int quality;
 
+    public static Item createBackstagePass(int sellIn, int quality) {
+        return new Item("Backstage passes to a TAFKAL80ETC concert",
+                sellIn, quality);
+    }
+
     public Item(String name, int sellIn, int quality) {
         this.name = name;
         this.sellIn = sellIn;

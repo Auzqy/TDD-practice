@@ -20,6 +20,8 @@ public class GildedRoseSafetyNet {
         String baseline = Files.asCharSource(
                 new File("gildedRose-refactoring-kata/src/test/java/top/auzqy/test01/baseline.txt"),
                 Charsets.UTF_8).toString();
+        System.out.println("output = " + output);
+        System.out.println("baseline = " + baseline);
 //        Assertions.assertEquals(output, baseline);
     }
 }

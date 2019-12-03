@@ -7,14 +7,10 @@ class GildedRose {
         this.items = items;
     }
 
-    private boolean isBackstagePass(Item item) {
-        return item.isBackstagePass();
-    }
-
     public void updateQuality() {
         for (Item item : items) {
             if (!isAgedBrie(item)
-                    && !isBackstagePass(item)) {
+                    && !item.isBackstagePass()) {
                 if (item.quality > 0) {
                     if (!isSulfuras(item)) {
                         item.quality = item.quality - 1;
@@ -24,7 +20,7 @@ class GildedRose {
                 if (item.quality < 50) {
                     item.quality = item.quality + 1;
 
-                    if (isBackstagePass(item)) {
+                    if (item.isBackstagePass()) {
                         if (item.sellIn < 11) {
                             if (item.quality < 50) {
                                 item.quality = item.quality + 1;
@@ -46,7 +42,7 @@ class GildedRose {
 
             if (item.sellIn < 0) {
                 if (!isAgedBrie(item)) {
-                    if (!isBackstagePass(item)) {
+                    if (!item.isBackstagePass()) {
                         if (item.quality > 0) {
                             if (!isSulfuras(item)) {
                                 item.quality = item.quality - 1;

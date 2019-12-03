@@ -18,7 +18,7 @@ public class GildedRoseSafetyNet {
     void should_always_align_with_baseline() {
         String output = TextTestFixture.getBaseLine();
         String baseline = Files.asCharSource(
-                new File("gildedRose-refactoring-kata/src/test/java/top/auzqy/test01/baseline.txt"),
+                new File("src/test/java/top/auzqy/test01/baseline.txt"),
                 Charsets.UTF_8).toString();
         System.out.println("output = " + output);
         System.out.println("baseline = " + baseline);

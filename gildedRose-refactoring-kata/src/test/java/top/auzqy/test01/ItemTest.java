@@ -11,5 +11,7 @@ class ItemTest {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 11, 20);
         item.passOneDay();
         MatcherAssert.assertThat(item.quality, Is.is(21));
+        item.passOneDay();
+        MatcherAssert.assertThat(item.quality, Is.is(23));
     }
 }

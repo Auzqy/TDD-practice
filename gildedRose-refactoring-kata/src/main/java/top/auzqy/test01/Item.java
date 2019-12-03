@@ -32,8 +32,8 @@ public class Item {
     }
 
     void passOneDay() {
-        updateQuality();
         updateSellInDays();
+        updateQuality();
 
         if (isExpired()) {
             updateQualityAfterExpiration();
@@ -53,13 +53,13 @@ public class Item {
                 quality = quality + 1;
 
                 if (isBackstagePass()) {
-                    if (sellIn < 11) {
+                    if (sellIn < 10) {
                         if (quality < 50) {
                             quality = quality + 1;
                         }
                     }
 
-                    if (sellIn < 6) {
+                    if (sellIn < 5) {
                         if (quality < 50) {
                             quality = quality + 1;
                         }

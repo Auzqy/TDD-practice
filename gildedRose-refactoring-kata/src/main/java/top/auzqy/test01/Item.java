@@ -21,6 +21,17 @@ public class Item {
         return new Item("Aged Brie", sellIn, quality);
     }
 
+    /**
+     * 这个方法的设计完全是为了使用时整齐，并非必须
+     * @param name
+     * @param sellIn
+     * @param quality
+     * @return
+     */
+    public static Item createNormalItem(String name, int sellIn, int quality) {
+        return new Item(name, sellIn, quality);
+    }
+
     public Item(String name, int sellIn, int quality) {
         this.name = name;
         this.sellIn = sellIn;

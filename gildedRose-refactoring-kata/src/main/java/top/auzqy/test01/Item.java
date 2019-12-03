@@ -45,22 +45,29 @@ public class Item {
     }
 
     private void updateQuality() {
-        if ((isAgedBrie()
-                || isBackstagePass())) {
+
+        if (isAgedBrie()) {
+            if (quality < 50) {
+                quality = quality + 1;
+            }
+            return;
+        }
+
+        if (isBackstagePass()) {
             if (quality < 50) {
                 quality = quality + 1;
 
-                if (isBackstagePass()) {
-                    if (sellIn < 10) {
-                        if (quality < 50) {
-                            quality = quality + 1;
-                        }
-                    }
+                if (sellIn >= 10) {
+                    return;
+                }
 
-                    if (sellIn < 5) {
-                        if (quality < 50) {
-                            quality = quality + 1;
-                        }
+                if (quality < 50) {
+                    quality = quality + 1;
+                }
+
+                if (sellIn < 5) {
+                    if (quality < 50) {
+                        quality = quality + 1;
                     }
                 }
             }

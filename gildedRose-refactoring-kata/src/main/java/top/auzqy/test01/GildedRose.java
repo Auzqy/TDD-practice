@@ -7,7 +7,7 @@ class GildedRose {
         this.items = items;
     }
 
-    public void updateQuality() {
+    public void passOneDay() {
         for (Item item : items) {
             if (!item.isAgedBrie()
                     && !item.isBackstagePass()) {

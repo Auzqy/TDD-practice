@@ -67,12 +67,13 @@ public class Item {
             return;
         }
 
+        if (quality <= 0) {
+            return;
+        }
 
-        if (quality > 0) {
             if (!isSulfuras()) {
                 quality = quality - 1;
             }
-        }
     }
 
     protected void updateQualityAfterExpiration() {

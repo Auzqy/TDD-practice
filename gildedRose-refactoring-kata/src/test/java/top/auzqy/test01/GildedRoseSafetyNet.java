@@ -1,17 +1,12 @@
 package top.auzqy.test01;
 
 import com.google.common.base.Charsets;
-import com.google.common.io.CharSource;
 import com.google.common.io.Files;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-
-import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
 
 public class GildedRoseSafetyNet {
 

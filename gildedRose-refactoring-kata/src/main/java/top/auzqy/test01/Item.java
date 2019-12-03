@@ -11,8 +11,7 @@ public class Item {
     public int quality;
 
     public static Item createBackstagePass(int sellIn, int quality) {
-        return new BackstagePass("Backstage passes to a TAFKAL80ETC concert",
-                sellIn, quality);
+        return new BackstagePass(sellIn, quality);
     }
 
     public static Item createSulfuras(int sellIn, int quality) {

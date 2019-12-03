@@ -23,10 +23,6 @@ public class Item {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
 
-    protected boolean isBackstagePass() {
-        return false;
-    }
-
     protected boolean isAgedBrie() {
         return false;
     }

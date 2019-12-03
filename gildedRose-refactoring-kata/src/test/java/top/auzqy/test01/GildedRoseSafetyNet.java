@@ -6,7 +6,6 @@ public class GildedRoseSafetyNet {
     
     @Test
     void should_always_align_with_baseline() {
-
         
     }
 }

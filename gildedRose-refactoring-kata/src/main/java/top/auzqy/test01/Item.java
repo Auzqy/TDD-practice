@@ -1,5 +1,7 @@
 package top.auzqy.test01;
 
+import top.auzqy.test01.items.BackstagePass;
+
 public class Item {
 
     public String name;
@@ -9,7 +11,7 @@ public class Item {
     public int quality;
 
     public static Item createBackstagePass(int sellIn, int quality) {
-        return new Item("Backstage passes to a TAFKAL80ETC concert",
+        return new BackstagePass("Backstage passes to a TAFKAL80ETC concert",
                 sellIn, quality);
     }
 
@@ -32,7 +34,7 @@ public class Item {
         return new Item(name, sellIn, quality);
     }
 
-    private Item(String name, int sellIn, int quality) {
+    protected Item(String name, int sellIn, int quality) {
         this.name = name;
         this.sellIn = sellIn;
         this.quality = quality;

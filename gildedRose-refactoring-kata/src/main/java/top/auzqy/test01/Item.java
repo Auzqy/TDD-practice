@@ -75,10 +75,6 @@ public class Item {
 
     protected void updateQualityAfterExpiration() {
 
-        if (isBackstagePass()) {
-            quality = 0;
-            return;
-        }
 
         if (quality <= 0) {
             return;

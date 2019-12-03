@@ -23,6 +23,6 @@ public class GildedRoseSafetyNet {
                 Charsets.UTF_8).read();
         System.out.println("output = " + output);
         System.out.println("baseline = " + baseline);
-//        Assertions.assertEquals(output, baseline);
+        Assertions.assertEquals(output, baseline);
     }
 }

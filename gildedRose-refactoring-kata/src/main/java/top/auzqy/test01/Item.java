@@ -32,6 +32,15 @@ public class Item {
     }
 
     void passOneDay() {
+        updateSellInDays();
+        updateQuality();
+
+        if (isExpired()) {
+            updateQualityAfterExpiration();
+        }
+    }
+
+    private void updateQuality() {
         if (!isAgedBrie()
                 && !isBackstagePass()) {
             if (quality > 0) {
@@ -57,12 +66,6 @@ public class Item {
                     }
                 }
             }
-        }
-
-        updateSellInDays();
-
-        if (isExpired()) {
-            updateQualityAfterExpiration();
         }
     }
 

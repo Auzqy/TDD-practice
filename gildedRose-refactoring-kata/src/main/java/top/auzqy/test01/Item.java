@@ -45,13 +45,12 @@ public class Item {
     }
 
     protected void updateQuality() {
+
         if (quality <= 0) {
             return;
         }
 
-        if (isSulfuras()) {
-            return;
-        }
+
 
         quality = quality - 1;
     }

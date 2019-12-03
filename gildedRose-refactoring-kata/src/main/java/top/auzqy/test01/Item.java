@@ -1,6 +1,7 @@
 package top.auzqy.test01;
 
 import top.auzqy.test01.items.BackstagePass;
+import top.auzqy.test01.items.Sulfuras;
 
 public class Item {
 
@@ -15,7 +16,7 @@ public class Item {
     }
 
     public static Item createSulfuras(int sellIn, int quality) {
-        return new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
+        return new Sulfuras(sellIn, quality);
     }
 
     public static Item createAgedBrie(int sellIn, int quality) {

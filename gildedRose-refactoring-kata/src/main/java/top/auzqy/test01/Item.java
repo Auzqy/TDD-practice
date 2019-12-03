@@ -14,8 +14,13 @@ public class Item {
         this.quality = quality;
     }
 
-   @Override
-   public String toString() {
+    @Override
+    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
+
+    private boolean isBackstagePass() {
+        return name.equals("Backstage passes to a TAFKAL80ETC concert");
+    }
+
 }

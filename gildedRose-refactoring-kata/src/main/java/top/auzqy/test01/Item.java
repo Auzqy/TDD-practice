@@ -78,16 +78,18 @@ public class Item {
             if (quality < 50) {
                 quality = quality + 1;
             }
+            return;
         }
 
-        if (!isBackstagePass()) {
-            if (quality > 0) {
-                if (!isSulfuras()) {
-                    quality = quality - 1;
-                }
-            }
-        } else {
+        if (isBackstagePass()) {
             quality = 0;
+            return;
+        }
+
+        if (quality > 0) {
+            if (!isSulfuras()) {
+                quality = quality - 1;
+            }
         }
     }
 
@@ -104,7 +106,6 @@ public class Item {
 //        }
 //        sellIn = sellIn - 1;
 //    }
-
     protected void updateSellInDays() {
         sellIn = sellIn - 1;
     }

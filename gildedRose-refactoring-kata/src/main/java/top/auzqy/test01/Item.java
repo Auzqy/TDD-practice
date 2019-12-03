@@ -32,7 +32,7 @@ public class Item {
         return new Item(name, sellIn, quality);
     }
 
-    public Item(String name, int sellIn, int quality) {
+    private Item(String name, int sellIn, int quality) {
         this.name = name;
         this.sellIn = sellIn;
         this.quality = quality;

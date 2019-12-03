@@ -33,20 +33,13 @@ public class Item {
     }
 
     protected void updateQuality() {
-        if (quality > 0) {
-            quality = quality - 1;
-        }
+        decreaseQuality();
     }
 
     protected void updateQualityAfterExpiration() {
-        if (quality > 0) {
-            quality = quality - 1;
-        }
+        decreaseQuality();
     }
 
-    private boolean isExpired() {
-        return sellIn < 0;
-    }
 
     /**
      * 把这个方法下放到子类，那么这行 return 的代码就可以删除了
@@ -60,4 +53,15 @@ public class Item {
     protected void updateSellInDays() {
         sellIn = sellIn - 1;
     }
+
+    private void decreaseQuality() {
+        if (quality > 0) {
+            quality = quality - 1;
+        }
+    }
+
+    private boolean isExpired() {
+        return sellIn < 0;
+    }
+
 }

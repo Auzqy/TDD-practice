@@ -98,10 +98,14 @@ public class Item {
     /**
      * 把这个方法下放到子类，那么这行 return 的代码就可以删除了
      */
-    private void updateSellInDays() {
-        if (isSulfuras()) {
-            return;
-        }
+//    private void updateSellInDays() {
+//        if (isSulfuras()) {
+//            return;
+//        }
+//        sellIn = sellIn - 1;
+//    }
+
+    protected void updateSellInDays() {
         sellIn = sellIn - 1;
     }
 }

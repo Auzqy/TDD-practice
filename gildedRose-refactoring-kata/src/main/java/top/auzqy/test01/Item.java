@@ -19,7 +19,7 @@ public class Item {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
 
-    private boolean isBackstagePass() {
+    boolean isBackstagePass() {
         return name.equals("Backstage passes to a TAFKAL80ETC concert");
     }
 

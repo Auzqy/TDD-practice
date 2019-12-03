@@ -16,8 +16,6 @@ public class GildedRoseSafetyNet {
         String baseline = Files.asCharSource(
                 new File("src/test/java/top/auzqy/test01/baseline.txt"),
                 Charsets.UTF_8).read();
-        System.out.println("output = " + output);
-        System.out.println("baseline = " + baseline);
         Assertions.assertEquals(output, baseline);
     }
 }
